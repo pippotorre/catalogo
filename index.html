@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>entratadisicurezza.app</title>
+  <meta name="description" content="Il catalogo delle app di entratadisicurezza.com.">
+  <meta name="theme-color" content="#1d2433">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="App">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" href="./img/icone/favicon.png">
+  <link rel="apple-touch-icon" href="./img/icone/apple-touch-icon.png">
+  <link rel="stylesheet" href="./css/app.css?v=1">
+</head>
+<body>
+  <header class="testata">
+    <div class="testata__interno">
+      <div class="marchio">
+        <img src="./img/icone/favicon.png" alt="" width="36" height="36">
+        <div>
+          <h1>entratadisicurezza<span>.app</span></h1>
+          <p class="sottotitolo">Tutte le app, in un posto solo</p>
+        </div>
+      </div>
+      <div class="vista" role="group" aria-label="Disposizione">
+        <button type="button" class="vista__btn" data-vista="tessere" aria-pressed="true" title="Tessere">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>
+          <span>Tessere</span>
+        </button>
+        <button type="button" class="vista__btn" data-vista="righe" aria-pressed="false" title="Righe">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="4" rx="1.5"/><rect x="3" y="10" width="18" height="4" rx="1.5"/><rect x="3" y="16" width="18" height="4" rx="1.5"/></svg>
+          <span>Righe</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenuto">
+    <p class="conteggio" id="conteggio" aria-live="polite"></p>
+    <ul class="elenco elenco--tessere" id="elenco"></ul>
+    <p class="vuoto" id="errore" hidden>Non riesco a caricare l'elenco delle app. Controlla la connessione e riprova.</p>
+  </main>
+
+  <footer class="piede">
+    <p>© <span id="anno"></span> entratadisicurezza.com</p>
+  </footer>
+
+  <dialog class="dettagli" id="dettagli" aria-labelledby="d-titolo">
+    <form method="dialog" class="dettagli__chiudi-form">
+      <button class="dettagli__chiudi" aria-label="Chiudi">×</button>
+    </form>
+    <div class="dettagli__testa">
+      <img id="d-icona" src="" alt="" width="64" height="64">
+      <div>
+        <h2 id="d-titolo"></h2>
+        <p class="dettagli__categoria" id="d-categoria"></p>
+      </div>
+    </div>
+    <p id="d-descrizione"></p>
+    <p id="d-note" class="dettagli__note"></p>
+    <h3>Tecnologia</h3>
+    <ul class="chip" id="d-tecnologie"></ul>
+    <dl class="dettagli__info">
+      <dt>Pubblicata su</dt><dd id="d-hosting"></dd>
+      <dt>Disponibile per</dt><dd id="d-piattaforme"></dd>
+    </dl>
+    <div class="dettagli__azioni">
+      <a id="d-apri" class="btn btn--pieno" href="#" target="_blank" rel="noopener">Apri l'app</a>
+      <a id="d-play" class="btn btn--play" href="#" target="_blank" rel="noopener" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5v19l10.5-9.5L4 2.5z" fill="#00c3ff"/><path d="M4 2.5l13.3 7.4-2.8 2.1L4 2.5z" fill="#00f076"/><path d="M4 21.5l10.5-9.5 2.8 2.1L4 21.5z" fill="#ff3a44"/><path d="M17.3 9.9L21 12l-3.7 2.1-2.8-2.1 2.8-2.1z" fill="#ffd400"/></svg>
+        Google Play
+      </a>
+    </div>
+  </dialog>
+
+  <div class="aggiornamento" id="aggiornamento" hidden>
+    <span>Nuova versione disponibile</span>
+    <button type="button" id="aggiorna">Aggiorna</button>
+  </div>
+
+  <script src="./js/app.js?v=1"></script>
+</body>
+</html>
