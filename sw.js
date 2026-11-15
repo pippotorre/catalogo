@@ -2,12 +2,12 @@
    - app shell: cache-first
    - data/apps.json: network-first con fallback alla cache
    Ad ogni rilascio aumenta VERSIONE (e ?v= in index.html). */
-const VERSIONE = 'catalogo-v2';
+const VERSIONE = 'catalogo-v3';
 const SHELL = [
   './',
   './index.html',
-  './css/app.css?v=2',
-  './js/app.js?v=2',
+  './css/app.css?v=3',
+  './js/app.js?v=3',
   './manifest.webmanifest',
   './data/apps.json',
   './img/icone/favicon.png',

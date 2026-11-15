@@ -265,7 +265,7 @@
       "caratteristiche": {
         "dati": {
           "valore": "no",
-          "testo": "Non raccoglie dati."
+          "testo": "Non raccoglie dati personali."
         },
         "offline": {
           "valore": "si",
