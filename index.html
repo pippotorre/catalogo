@@ -13,7 +13,7 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" type="image/png" href="./img/icone/favicon.png">
   <link rel="apple-touch-icon" href="./img/icone/apple-touch-icon.png">
-  <link rel="stylesheet" href="./css/app.css?v=1">
+  <link rel="stylesheet" href="./css/app.css?v=2">
 </head>
 <body>
   <header class="testata">
@@ -63,6 +63,12 @@
     <p id="d-note" class="dettagli__note"></p>
     <h3>Tecnologia</h3>
     <ul class="chip" id="d-tecnologie"></ul>
+    <h3>Privacy e funzionamento</h3>
+    <ul class="caratteristiche" id="d-caratteristiche"></ul>
+    <p class="cookie">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Nessun cookie di tracciamento, nessuna pubblicità
+    </p>
     <dl class="dettagli__info">
       <dt>Pubblicata su</dt><dd id="d-hosting"></dd>
       <dt>Disponibile per</dt><dd id="d-piattaforme"></dd>
@@ -76,11 +82,13 @@
     </div>
   </dialog>
 
+  <div class="toast" id="toast" role="status" aria-live="polite" popover="manual"></div>
+
   <div class="aggiornamento" id="aggiornamento" hidden>
     <span>Nuova versione disponibile</span>
     <button type="button" id="aggiorna">Aggiorna</button>
   </div>
 
-  <script src="./js/app.js?v=1"></script>
+  <script src="./js/app.js?v=2"></script>
 </body>
 </html>

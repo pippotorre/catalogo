@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-14",
+  "aggiornato": "2026-11-15",
   "apps": [
     {
       "id": "buonapp",
@@ -9,11 +9,45 @@
       "icona": "img/app/buonapp.png",
       "colore": "#fcbb21",
       "categoria": "Scuola",
-      "tecnologie": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "PWA"],
+      "tecnologie": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "PWA"
+      ],
       "hosting": "Tophost",
-      "piattaforme": ["Web", "Android", "iPhone"],
+      "piattaforme": [
+        "Web",
+        "Android",
+        "iPhone"
+      ],
       "playStore": "https://play.google.com/store/apps/details?id=com.entratadisicurezza.buonapp",
-      "note": "I menu vengono importati dai calendari del Comune di Torino e aggiornati automaticamente."
+      "note": "I menu vengono importati dai calendari del Comune di Torino e aggiornati automaticamente.",
+      "caratteristiche": {
+        "dati": {
+          "valore": "no",
+          "testo": "Non raccoglie dati personali, nemmeno dei bambini; i menu preferiti restano sul telefono."
+        },
+        "offline": {
+          "valore": "si",
+          "testo": "I menu già scaricati restano consultabili senza connessione."
+        },
+        "posizione": {
+          "valore": "no",
+          "testo": "Non usa la posizione."
+        },
+        "account": {
+          "valore": "no",
+          "testo": "Nessuna registrazione."
+        },
+        "notifiche": {
+          "valore": "no",
+          "testo": "Nessuna notifica."
+        }
+      },
+      "playStoreStato": "in-pubblicazione"
     },
     {
       "id": "nasone",
@@ -23,11 +57,45 @@
       "icona": "img/app/nasone.png",
       "colore": "#5a3a6e",
       "categoria": "Città",
-      "tecnologie": ["HTML", "CSS", "JavaScript", "Leaflet", "OpenStreetMap", "PWA"],
+      "tecnologie": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Leaflet",
+        "OpenStreetMap",
+        "PWA"
+      ],
       "hosting": "GitHub Pages",
-      "piattaforme": ["Web", "Android", "iPhone"],
+      "piattaforme": [
+        "Web",
+        "Android",
+        "iPhone"
+      ],
       "playStore": "https://play.google.com/store/apps/details?id=com.entratadisicurezza.nasone",
-      "note": "Percorso a piedi con indicazioni passo passo, pagina di storia e curiosità, 5 lingue."
+      "note": "Percorso a piedi con indicazioni passo passo, pagina di storia e curiosità, 5 lingue.",
+      "caratteristiche": {
+        "dati": {
+          "valore": "no",
+          "testo": "Non raccoglie dati personali: lingua e ultimi risultati restano solo sul telefono, per 7 giorni."
+        },
+        "offline": {
+          "valore": "parziale",
+          "testo": "Si apre e mostra gli ultimi risultati; mappe e percorsi richiedono internet."
+        },
+        "posizione": {
+          "valore": "si",
+          "testo": "Solo durante la ricerca e con il tuo permesso; non viene salvata né inviata."
+        },
+        "account": {
+          "valore": "no",
+          "testo": "Nessuna registrazione."
+        },
+        "notifiche": {
+          "valore": "no",
+          "testo": "Nessuna notifica."
+        }
+      },
+      "playStoreStato": "in-pubblicazione"
     },
     {
       "id": "turet",
@@ -37,11 +105,45 @@
       "icona": "img/app/turet.png",
       "colore": "#2f6f55",
       "categoria": "Città",
-      "tecnologie": ["HTML", "CSS", "JavaScript", "Leaflet", "OpenStreetMap", "PWA"],
+      "tecnologie": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Leaflet",
+        "OpenStreetMap",
+        "PWA"
+      ],
       "hosting": "GitHub Pages",
-      "piattaforme": ["Web", "Android", "iPhone"],
+      "piattaforme": [
+        "Web",
+        "Android",
+        "iPhone"
+      ],
       "playStore": "https://play.google.com/store/apps/details?id=com.entratadisicurezza.turet",
-      "note": "Percorso a piedi con indicazioni passo passo, 5 lingue."
+      "note": "Percorso a piedi con indicazioni passo passo, 5 lingue.",
+      "caratteristiche": {
+        "dati": {
+          "valore": "no",
+          "testo": "Non raccoglie dati personali: lingua e ultimi risultati restano solo sul telefono, per 7 giorni."
+        },
+        "offline": {
+          "valore": "parziale",
+          "testo": "Si apre e mostra gli ultimi risultati; mappe e percorsi richiedono internet."
+        },
+        "posizione": {
+          "valore": "si",
+          "testo": "Solo durante la ricerca e con il tuo permesso; non viene salvata né inviata."
+        },
+        "account": {
+          "valore": "no",
+          "testo": "Nessuna registrazione."
+        },
+        "notifiche": {
+          "valore": "no",
+          "testo": "Nessuna notifica."
+        }
+      },
+      "playStoreStato": "in-pubblicazione"
     },
     {
       "id": "fontanelle",
@@ -51,25 +153,92 @@
       "icona": "img/app/fontanelle.png",
       "colore": "#1f5fa8",
       "categoria": "Città",
-      "tecnologie": ["HTML", "CSS", "JavaScript", "Leaflet", "OpenStreetMap", "GitHub Actions", "PWA"],
+      "tecnologie": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Leaflet",
+        "OpenStreetMap",
+        "GitHub Actions",
+        "PWA"
+      ],
       "hosting": "GitHub Pages",
-      "piattaforme": ["Web", "Android", "iPhone"],
+      "piattaforme": [
+        "Web",
+        "Android",
+        "iPhone"
+      ],
       "playStore": null,
-      "note": "Ogni settimana GitHub Actions scarica i dati di tutta Italia e li divide in tessere: risultati immediati."
+      "note": "Ogni settimana GitHub Actions scarica i dati di tutta Italia e li divide in tessere: risultati immediati.",
+      "caratteristiche": {
+        "dati": {
+          "valore": "no",
+          "testo": "Non raccoglie dati personali: lingua e ultimi risultati restano solo sul telefono, per 7 giorni."
+        },
+        "offline": {
+          "valore": "parziale",
+          "testo": "Si apre e mostra gli ultimi risultati; mappe e percorsi richiedono internet."
+        },
+        "posizione": {
+          "valore": "si",
+          "testo": "Solo durante la ricerca e con il tuo permesso; non viene salvata né inviata."
+        },
+        "account": {
+          "valore": "no",
+          "testo": "Nessuna registrazione."
+        },
+        "notifiche": {
+          "valore": "no",
+          "testo": "Nessuna notifica."
+        }
+      }
     },
     {
       "id": "spesaok",
       "titolo": "spesaok",
       "descrizione": "Le offerte dei volantini dei supermercati di Torino e dintorni, ordinate dalla più conveniente.",
-      "url": "https://entratadisicurezza.com/spesaok/",
+      "url": "https://spesaok.entratadisicurezza.com/",
       "icona": "img/app/spesaok.png",
       "colore": "#0c5a42",
       "categoria": "Casa",
-      "tecnologie": ["HTML", "CSS", "JavaScript", "Python", "GitHub Actions", "PWA"],
+      "tecnologie": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python",
+        "GitHub Actions",
+        "PWA"
+      ],
       "hosting": "GitHub Pages",
-      "piattaforme": ["Web", "Android", "iPhone"],
+      "piattaforme": [
+        "Web",
+        "Android",
+        "iPhone"
+      ],
       "playStore": null,
-      "note": "Raccoglitori in Python leggono periodicamente i volantini; prezzi confrontati anche al kg/litro."
+      "note": "Raccoglitori in Python leggono periodicamente i volantini; prezzi confrontati anche al kg/litro.",
+      "caratteristiche": {
+        "dati": {
+          "valore": "no",
+          "testo": "Non raccoglie dati personali: liste della spesa e preferenze restano sul telefono."
+        },
+        "offline": {
+          "valore": "si",
+          "testo": "Le ultime offerte scaricate restano consultabili senza connessione."
+        },
+        "posizione": {
+          "valore": "no",
+          "testo": "Non usa la posizione."
+        },
+        "account": {
+          "valore": "no",
+          "testo": "Nessuna registrazione."
+        },
+        "notifiche": {
+          "valore": "no",
+          "testo": "Nessuna notifica."
+        }
+      }
     },
     {
       "id": "uova",
@@ -79,11 +248,42 @@
       "icona": "img/app/uova.png",
       "colore": "#f5a623",
       "categoria": "Casa",
-      "tecnologie": ["HTML", "CSS", "JavaScript", "PWA"],
+      "tecnologie": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PWA"
+      ],
       "hosting": "GitHub Pages",
-      "piattaforme": ["Web", "Android", "iPhone"],
+      "piattaforme": [
+        "Web",
+        "Android",
+        "iPhone"
+      ],
       "playStore": null,
-      "note": ""
+      "note": "",
+      "caratteristiche": {
+        "dati": {
+          "valore": "no",
+          "testo": "Non raccoglie dati."
+        },
+        "offline": {
+          "valore": "si",
+          "testo": "Funziona interamente senza connessione."
+        },
+        "posizione": {
+          "valore": "no",
+          "testo": "Non usa la posizione."
+        },
+        "account": {
+          "valore": "no",
+          "testo": "Nessuna registrazione."
+        },
+        "notifiche": {
+          "valore": "no",
+          "testo": "Nessuna notifica."
+        }
+      }
     },
     {
       "id": "guida-claude",
@@ -93,11 +293,43 @@
       "icona": "img/app/guida-claude.png",
       "colore": "#c2562f",
       "categoria": "Strumenti",
-      "tecnologie": ["HTML", "CSS", "JavaScript", "JSON", "PWA"],
+      "tecnologie": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "JSON",
+        "PWA"
+      ],
       "hosting": "GitHub Pages",
-      "piattaforme": ["Web", "Android", "iPhone"],
+      "piattaforme": [
+        "Web",
+        "Android",
+        "iPhone"
+      ],
       "playStore": null,
-      "note": "I contenuti stanno in un unico data.json aggiornato da un'attività programmata."
+      "note": "I contenuti stanno in un unico data.json aggiornato da un'attività programmata.",
+      "caratteristiche": {
+        "dati": {
+          "valore": "no",
+          "testo": "Non raccoglie dati."
+        },
+        "offline": {
+          "valore": "si",
+          "testo": "I contenuti restano in memoria e si aggiornano quando c'è rete."
+        },
+        "posizione": {
+          "valore": "no",
+          "testo": "Non usa la posizione."
+        },
+        "account": {
+          "valore": "no",
+          "testo": "Nessuna registrazione."
+        },
+        "notifiche": {
+          "valore": "no",
+          "testo": "Nessuna notifica."
+        }
+      }
     },
     {
       "id": "svolta",
@@ -107,11 +339,45 @@
       "icona": "img/app/svolta.png",
       "colore": "#13294b",
       "categoria": "Scuola",
-      "tecnologie": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Web Push", "PWA"],
+      "tecnologie": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "Web Push",
+        "PWA"
+      ],
       "hosting": "Tophost",
-      "piattaforme": ["Web", "Android", "iPhone"],
+      "piattaforme": [
+        "Web",
+        "Android",
+        "iPhone"
+      ],
       "playStore": null,
-      "note": "Il controllo delle nuove circolari è pianificato con cron-job.org; notifiche push senza librerie esterne."
+      "note": "Il controllo delle nuove circolari è pianificato con cron-job.org; notifiche push senza librerie esterne.",
+      "caratteristiche": {
+        "dati": {
+          "valore": "minimi",
+          "testo": "Nessun nome, numero o email. Solo se attivi le notifiche conserva un'iscrizione tecnica anonima; le circolari lette restano sul telefono."
+        },
+        "offline": {
+          "valore": "parziale",
+          "testo": "Si apre senza connessione e le circolari già aperte si rileggono."
+        },
+        "posizione": {
+          "valore": "no",
+          "testo": "Non usa la posizione."
+        },
+        "account": {
+          "valore": "no",
+          "testo": "Nessuna registrazione."
+        },
+        "notifiche": {
+          "valore": "si",
+          "testo": "Facoltative: un avviso quando esce una nuova circolare."
+        }
+      }
     },
     {
       "id": "reserve",
@@ -121,11 +387,42 @@
       "icona": "img/app/reserve.png",
       "colore": "#b5651d",
       "categoria": "Servizi",
-      "tecnologie": ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "PWA"],
+      "tecnologie": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "MySQL",
+        "PWA"
+      ],
       "hosting": "Tophost",
-      "piattaforme": ["Web"],
+      "piattaforme": [
+        "Web"
+      ],
       "playStore": null,
-      "note": "Ruoli utente, operatore e amministratore; email di conferma via SMTP."
+      "note": "Ruoli utente, operatore e amministratore; email di conferma via SMTP.",
+      "caratteristiche": {
+        "dati": {
+          "valore": "si",
+          "testo": "Nome, email, telefono (facoltativo), prenotazioni e, se l'attività lo chiede, nome ed età dei bambini. Usati solo per gestire le prenotazioni, mai ceduti."
+        },
+        "offline": {
+          "valore": "no",
+          "testo": "Serve la connessione: posti e prenotazioni sono sempre quelli del server."
+        },
+        "posizione": {
+          "valore": "no",
+          "testo": "Non usa la posizione."
+        },
+        "account": {
+          "valore": "si",
+          "testo": "Registrazione con email e password."
+        },
+        "notifiche": {
+          "valore": "no",
+          "testo": "Nessuna notifica push: conferme e avvisi arrivano via email."
+        }
+      }
     },
     {
       "id": "laundryscanner",
@@ -135,11 +432,41 @@
       "icona": "img/app/laundryscanner.png",
       "colore": "#3a7bd5",
       "categoria": "Casa",
-      "tecnologie": ["React Native", "Expo", "TensorFlow Lite", "YOLO"],
+      "tecnologie": [
+        "React Native",
+        "Expo",
+        "TensorFlow Lite",
+        "YOLO"
+      ],
       "hosting": "Google Play",
-      "piattaforme": ["Android"],
+      "piattaforme": [
+        "Android"
+      ],
       "playStore": "https://play.google.com/store/apps/details?id=com.entratadisicurezza.laundryscanner",
-      "note": "Tutto avviene sul telefono: nessun server, funziona anche offline. 51 simboli in 5 lingue."
+      "note": "Tutto avviene sul telefono: nessun server, funziona anche offline. 51 simboli in 5 lingue.",
+      "caratteristiche": {
+        "dati": {
+          "valore": "no",
+          "testo": "Le foto sono analizzate sul telefono e non vengono inviate; i capi salvati nell'armadio restano in memoria."
+        },
+        "offline": {
+          "valore": "si",
+          "testo": "Il riconoscimento avviene interamente sul telefono."
+        },
+        "posizione": {
+          "valore": "no",
+          "testo": "Non usa la posizione."
+        },
+        "account": {
+          "valore": "no",
+          "testo": "Nessuna registrazione."
+        },
+        "notifiche": {
+          "valore": "no",
+          "testo": "Nessuna notifica."
+        }
+      },
+      "playStoreStato": "in-pubblicazione"
     }
   ]
 }

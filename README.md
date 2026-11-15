@@ -8,7 +8,7 @@ Indirizzo: **https://catalogo.entratadisicurezza.com/**
 ## Aggiungere o modificare un'app
 Tutto sta in `data/apps.json`. Per una nuova app aggiungi un oggetto all'elenco `apps` e metti la sua icona (128×128 PNG) in `img/app/`, poi aggiungi il percorso dell'icona alla lista `SHELL` in `sw.js` e aumenta `VERSIONE`.
 
-Campi: `id`, `titolo`, `descrizione`, `url`, `icona`, `colore`, `categoria`, `tecnologie` (elenco), `hosting`, `piattaforme` (elenco), `playStore` (URL o `null`), `note`.
+Campi: `id`, `titolo`, `descrizione`, `url`, `icona`, `colore`, `categoria`, `tecnologie` (elenco), `hosting`, `piattaforme` (elenco), `playStore` (URL o `null`), `playStoreStato` (`"in-pubblicazione"` finché l'app non è sullo store: il link mostra un avviso invece di aprirsi), `note`, `caratteristiche` (`dati`, `offline`, `posizione`, `account`, `notifiche`, ognuna con `valore` e `testo`).
 
 ## Pubblicazione (GitHub Pages)
 1. **Settings → Pages → Build and deployment → Source:** *GitHub Actions*.

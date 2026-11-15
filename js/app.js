@@ -41,11 +41,14 @@
     const apri = el('a', { class: 'btn btn--pieno', href: app.url, target: '_blank', rel: 'noopener', text: 'Apri' });
     const dettagli = el('button', { class: 'btn', type: 'button', text: 'Dettagli', 'aria-haspopup': 'dialog' });
     dettagli.addEventListener('click', () => mostraDettagli(app));
+    const titolo = el('a', { href: app.url, target: '_blank', rel: 'noopener', text: app.titolo });
+    segnaPlay(apri, app);
+    segnaPlay(titolo, app);
 
     return el('li', { class: 'app', style: `--colore:${app.colore}` }, [
       el('img', { class: 'app__icona', src: app.icona, alt: '', width: '64', height: '64', loading: 'lazy' }),
       el('div', { class: 'app__testo' }, [
-        el('h2', { class: 'app__titolo' }, [el('a', { href: app.url, target: '_blank', rel: 'noopener', text: app.titolo })]),
+        el('h2', { class: 'app__titolo' }, [titolo]),
         el('p', { class: 'app__categoria', text: app.categoria })
       ]),
       el('p', { class: 'app__descrizione', text: app.descrizione }),
@@ -58,6 +61,61 @@
     conteggio.textContent = apps.length === 1 ? '1 app' : `${apps.length} app`;
   }
 
+  /* ---------- Toast ---------- */
+  const toast = document.getElementById('toast');
+  let timerToast;
+  function mostraToast(testo) {
+    toast.textContent = testo;
+    clearTimeout(timerToast);
+    // popover: resta visibile anche sopra la finestra dei dettagli
+    try { if (toast.matches(':popover-open')) toast.hidePopover(); toast.showPopover(); }
+    catch (e) { toast.setAttribute('data-aperto', ''); }
+    toast.classList.add('toast--visibile');
+    timerToast = setTimeout(() => {
+      toast.classList.remove('toast--visibile');
+      setTimeout(() => {
+        try { toast.hidePopover(); } catch (e) { toast.removeAttribute('data-aperto'); }
+      }, 250);
+    }, 2600);
+  }
+
+  // Link a Google Play non ancora attivi: mostra il toast invece di aprirli
+  function segnaPlay(link, app) {
+    const inAttesa = app.playStoreStato === 'in-pubblicazione' && link.href.includes('play.google.com');
+    link.toggleAttribute('data-in-pubblicazione', inAttesa);
+  }
+  document.addEventListener('click', e => {
+    const link = e.target.closest('a[data-in-pubblicazione]');
+    if (!link) return;
+    e.preventDefault();
+    mostraToast('In fase di pubblicazione su Google Play');
+  });
+
+  /* ---------- Caratteristiche ---------- */
+  const VOCI = {
+    dati:      { titolo: 'Trattiene dati personali', valori: { si: 'Sì', no: 'No', minimi: 'Minimi' }, positivo: 'no' },
+    offline:   { titolo: 'Funziona offline',          valori: { si: 'Sì', no: 'No', parziale: 'In parte' }, positivo: 'si' },
+    posizione: { titolo: 'Usa la posizione',          valori: { si: 'Sì', no: 'No' } },
+    account:   { titolo: 'Richiede account',          valori: { si: 'Sì', no: 'No' } },
+    notifiche: { titolo: 'Notifiche',                 valori: { si: 'Sì', no: 'No' } }
+  };
+  function caratteristiche(app) {
+    const c = app.caratteristiche || {};
+    return Object.keys(VOCI).filter(k => c[k]).map(k => {
+      const voce = VOCI[k];
+      const v = c[k].valore;
+      let tono = 'neutro';
+      if (voce.positivo) tono = v === voce.positivo ? 'buono' : (v === 'no' || v === 'si' ? 'attenzione' : 'medio');
+      return el('li', {}, [
+        el('div', { class: 'caratteristiche__riga' }, [
+          el('span', { class: 'caratteristiche__titolo', text: voce.titolo }),
+          el('span', { class: `valore valore--${tono}`, text: voce.valori[v] || v })
+        ]),
+        el('p', { class: 'caratteristiche__testo', text: c[k].testo })
+      ]);
+    });
+  }
+
   /* ---------- Dettagli ---------- */
   function mostraDettagli(app) {
     dialogo.style.setProperty('--colore', app.colore);
@@ -67,17 +125,19 @@
     document.getElementById('d-descrizione').textContent = app.descrizione;
     document.getElementById('d-note').textContent = app.note || '';
     document.getElementById('d-tecnologie').replaceChildren(...app.tecnologie.map(t => el('li', { text: t })));
+    document.getElementById('d-caratteristiche').replaceChildren(...caratteristiche(app));
     document.getElementById('d-hosting').textContent = app.hosting;
     document.getElementById('d-piattaforme').textContent = app.piattaforme.join(', ');
 
     const apri = document.getElementById('d-apri');
     apri.href = app.url;
     apri.textContent = app.url.includes('play.google.com') ? 'Apri su Google Play' : "Apri l'app";
+    segnaPlay(apri, app);
 
     const play = document.getElementById('d-play');
     const mostraPlay = app.playStore && app.playStore !== app.url;
     play.hidden = !mostraPlay;
-    if (mostraPlay) play.href = app.playStore;
+    if (mostraPlay) { play.href = app.playStore; segnaPlay(play, app); }
 
     if (typeof dialogo.showModal === 'function') dialogo.showModal();
     else dialogo.setAttribute('open', '');

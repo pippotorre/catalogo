@@ -15,6 +15,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
 img { display: block; }
+[hidden] { display: none !important; }
 
 /* Testata */
 .testata {
@@ -148,6 +149,33 @@ img { display: block; }
 .dettagli__azioni { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
 .dettagli__azioni .btn { flex: 1; padding: 11px 14px; }
 
+/* Privacy e funzionamento */
+.caratteristiche { list-style: none; margin: 0; padding: 0; border: 1px solid var(--bordo); border-radius: 12px; }
+.caratteristiche li { padding: 9px 12px; }
+.caratteristiche li + li { border-top: 1px solid var(--bordo); }
+.caratteristiche__riga { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.caratteristiche__titolo { font-weight: 600; font-size: .92rem; }
+.caratteristiche__testo { margin: 3px 0 0; font-size: .84rem; color: var(--tenue); line-height: 1.4; }
+.valore { font-size: .78rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; white-space: nowrap; }
+.valore--buono { background: #e2f3ea; color: #1d6b43; }
+.valore--medio { background: #fdf0d8; color: #8a5a0b; }
+.valore--attenzione { background: #fbe4dd; color: #a2391f; }
+.valore--neutro { background: #ece9e2; color: #4a5160; }
+.cookie { display: flex; align-items: center; gap: 8px; margin: 10px 0 0; font-size: .86rem; font-weight: 600; color: #1d6b43; }
+.cookie svg { width: 18px; height: 18px; fill: #2e8a5a; flex-shrink: 0; }
+
+/* Toast (popover: sta sopra anche alla finestra dei dettagli) */
+.toast {
+  position: fixed; inset: auto auto calc(env(safe-area-inset-bottom) + 24px) 50%;
+  transform: translate(-50%, 10px); margin: 0;
+  border: 0; padding: 11px 18px; border-radius: 12px;
+  background: var(--inchiostro); color: #fff; font-size: .92rem; font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,.3);
+  opacity: 0; transition: opacity .2s, transform .2s; pointer-events: none;
+}
+.toast:not(:popover-open):not([data-aperto]) { display: none; }
+.toast--visibile { opacity: 1; transform: translate(-50%, 0); }
+
 /* Avviso aggiornamento */
 .aggiornamento {
   position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom) + 16px); transform: translateX(-50%);
@@ -169,5 +197,10 @@ img { display: block; }
   .dettagli { background: var(--superficie); }
   .dettagli__chiudi { background: #2a3142; }
   .chip li { background: color-mix(in srgb, var(--colore, #888) 25%, #1b2130); color: #eef0f4; border-color: color-mix(in srgb, var(--colore, #888) 45%, #1b2130); }
-  .aggiornamento { background: #eef0f4; color: #12161f; }
+  .aggiornamento, .toast { background: #eef0f4; color: #12161f; }
+  .valore--buono { background: #1f3a2c; color: #8fdcb0; }
+  .valore--medio { background: #3d3018; color: #f2c97a; }
+  .valore--attenzione { background: #43231b; color: #f4a58f; }
+  .valore--neutro { background: #2a3142; color: #c8ced8; }
+  .cookie { color: #8fdcb0; }
 }
