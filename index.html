@@ -13,7 +13,11 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" type="image/png" href="./img/icone/favicon.png">
   <link rel="apple-touch-icon" href="./img/icone/apple-touch-icon.png">
-  <link rel="stylesheet" href="./css/app.css?v=2">
+  <link rel="stylesheet" href="./css/app.css?v=3">
+  <!-- Statistiche di visita senza cookie (GoatCounter): conta le pagine viste, nessun dato personale.
+       L'app sta su un sottodominio: il nome «/catalogo» davanti al percorso la distingue dalle altre nella stessa dashboard. -->
+  <script>window.goatcounter = { path: function () { var p = location.pathname.replace(/index\.html$/, ''); return p.indexOf('/catalogo/') === 0 ? p : '/catalogo' + p; } };</script>
+  <script data-goatcounter="https://entratadisicurezza.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
   <header class="testata">
@@ -46,6 +50,7 @@
 
   <footer class="piede">
     <p>© <span id="anno"></span> entratadisicurezza.com</p>
+    <p>Le visite sono contate in forma anonima, senza cookie.</p>
   </footer>
 
   <dialog class="dettagli" id="dettagli" aria-labelledby="d-titolo">
@@ -89,6 +94,6 @@
     <button type="button" id="aggiorna">Aggiorna</button>
   </div>
 
-  <script src="./js/app.js?v=2"></script>
+  <script src="./js/app.js?v=3"></script>
 </body>
 </html>
