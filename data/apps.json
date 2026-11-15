@@ -241,6 +241,58 @@
       }
     },
     {
+      "id": "bookcase",
+      "titolo": "Bookcase",
+      "descrizione": "Cataloga i libri di casa, ufficio e casa al mare inquadrando il codice a barre: titolo, autori e copertina arrivano da soli.",
+      "url": "https://www.entratadisicurezza.com/bookcase/",
+      "icona": "img/app/bookcase.png",
+      "colore": "#5F84A8",
+      "categoria": "Casa",
+      "tecnologie": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "IndexedDB",
+        "PHP",
+        "MySQL",
+        "zxing-wasm",
+        "Google Books",
+        "Open Library",
+        "PWA"
+      ],
+      "hosting": "Tophost",
+      "piattaforme": [
+        "Web",
+        "Android",
+        "iPhone"
+      ],
+      "playStore": "https://play.google.com/store/apps/details?id=com.entratadisicurezza.bookcase",
+      "playStoreStato": "in-pubblicazione",
+      "note": "Luoghi e scaffali, prestiti, stato di lettura, lista dei desideri, esportazione CSV; biblioteca condivisibile con la famiglia. 4 lingue.",
+      "caratteristiche": {
+        "dati": {
+          "valore": "facoltativo",
+          "testo": "Senza account i libri restano solo sul telefono. Con l'account facoltativo si salvano email e biblioteca, per sincronizzare e condividere; l'account si elimina dall'app."
+        },
+        "offline": {
+          "valore": "si",
+          "testo": "Funziona senza connessione: i libri scansionati offline vengono completati quando torna la rete."
+        },
+        "posizione": {
+          "valore": "no",
+          "testo": "Non usa la posizione."
+        },
+        "account": {
+          "valore": "facoltativo",
+          "testo": "Facoltativo, senza password: si accede con un codice inviato per email."
+        },
+        "notifiche": {
+          "valore": "no",
+          "testo": "Nessuna notifica."
+        }
+      }
+    },
+    {
       "id": "uova",
       "titolo": "Uova",
       "descrizione": "Il tempo di cottura per l'uovo perfetto e il test per capire se un uovo è ancora fresco.",

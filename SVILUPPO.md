@@ -17,7 +17,7 @@ Una pagina unica (PWA installabile) che elenca tutte le app realizzate, organizz
 - La scelta tessere/righe è ricordata sul dispositivo (localStorage).
 
 ## App in catalogo (14/11/2026)
-Buon App, Nasone, Turet, Fontanelle, spesaok, Uova, Guida Claude, sVolta, Reserve, LaundryScanner.
+Buon App, Nasone, Turet, Fontanelle, spesaok, Bookcase, Uova, Guida Claude, sVolta, Reserve, LaundryScanner.
 
 ## Funzionalità
 - [x] Vista a tessere e a righe, con scelta ricordata
@@ -26,7 +26,7 @@ Buon App, Nasone, Turet, Fontanelle, spesaok, Uova, Guida Claude, sVolta, Reserv
 - [x] Deploy automatico su GitHub Pages
 - [x] Sezione «Privacy e funzionamento» nei Dettagli
 - [x] Toast «In fase di pubblicazione» sui link Google Play
-- [ ] Togliere `playStoreStato` quando le app sono approvate (Buon App, Nasone, Turet, LaundryScanner)
+- [ ] Togliere `playStoreStato` quando le app sono approvate (Buon App, Nasone, Turet, LaundryScanner, Bookcase)
 - [ ] Idee: ricerca/filtro per categoria o tecnologia, ordinamento, logo definitivo
 
 ## Registro
@@ -35,3 +35,4 @@ Buon App, Nasone, Turet, Fontanelle, spesaok, Uova, Guida Claude, sVolta, Reserv
 | 14/11/2026 | Prima versione: struttura PWA, dati delle 10 app ricavati dai README e dai manifest dei repository, icone copiate dalle singole app, workflow di pubblicazione. |
 | 15/11/2026 | spesaok su `spesaok.entratadisicurezza.com`; toast «In fase di pubblicazione» per i link Google Play; sezione «Privacy e funzionamento» nei Dettagli; corretto il pulsante Google Play che compariva anche senza link (`[hidden]` scavalcato da `.btn`). Cache `catalogo-v2`. |
 | 15/11/2026 | Statistiche di visita con GoatCounter (senza cookie), dashboard comune https://entratadisicurezza.goatcounter.com: script in `index.html`, percorso inviato `/catalogo/` (nome dell'app davanti al percorso, perché sui sottodomini sarebbe `/` per tutte). Nessun pulsante di installazione, quindi nessun evento. Riga «Le visite sono contate in forma anonima, senza cookie» nel piè di pagina; per Uova il testo «Non raccoglie dati» diventa «Non raccoglie dati personali». `?v=3`, cache `catalogo-v3`. |
+| 15/11/2026 | Aggiunta **Bookcase** (www.entratadisicurezza.com/bookcase/, Tophost PHP + MySQL, Google Play in pubblicazione). Nuovo valore `facoltativo` per le voci *dati* («Solo con account») e *account* («Facoltativo»). Icona `img/app/bookcase.png`. Cache `catalogo-v4`. |

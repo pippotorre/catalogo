@@ -93,10 +93,10 @@
 
   /* ---------- Caratteristiche ---------- */
   const VOCI = {
-    dati:      { titolo: 'Trattiene dati personali', valori: { si: 'Sì', no: 'No', minimi: 'Minimi' }, positivo: 'no' },
+    dati:      { titolo: 'Trattiene dati personali', valori: { si: 'Sì', no: 'No', minimi: 'Minimi', facoltativo: 'Solo con account' }, positivo: 'no' },
     offline:   { titolo: 'Funziona offline',          valori: { si: 'Sì', no: 'No', parziale: 'In parte' }, positivo: 'si' },
     posizione: { titolo: 'Usa la posizione',          valori: { si: 'Sì', no: 'No' } },
-    account:   { titolo: 'Richiede account',          valori: { si: 'Sì', no: 'No' } },
+    account:   { titolo: 'Richiede account',          valori: { si: 'Sì', no: 'No', facoltativo: 'Facoltativo' } },
     notifiche: { titolo: 'Notifiche',                 valori: { si: 'Sì', no: 'No' } }
   };
   function caratteristiche(app) {
